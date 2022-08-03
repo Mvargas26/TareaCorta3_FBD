@@ -26,6 +26,9 @@ namespace Datos
                 StrConexionArmado.Append(ConfigurationManager.AppSettings["User"]);
                 StrConexionArmado.Append("; Password=");
                 StrConexionArmado.Append(ConfigurationManager.AppSettings["Password"]);
+                StrConexionArmado.Append("; DataBase=");
+                StrConexionArmado.Append(ConfigurationManager.AppSettings["DataBase"]);
+                StrConexionArmado.Append(";");
 
                 this.mySQLconector = new MySqlConnection(StrConexionArmado.ToString());
             }
