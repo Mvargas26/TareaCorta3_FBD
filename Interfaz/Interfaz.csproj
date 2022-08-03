@@ -95,10 +95,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearUsuario.Designer.cs">
+      <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoguin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoguin.Designer.cs">
+      <DependentUpon>frmLoguin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearUsuario.resx">
+      <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoguin.resx">
+      <DependentUpon>frmLoguin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
