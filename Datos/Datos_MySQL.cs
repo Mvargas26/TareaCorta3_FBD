@@ -1,8 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Datos
 {
@@ -25,9 +28,6 @@ namespace Datos
                 StrConexionArmado.Append(ConfigurationManager.AppSettings["Password"]);
 
                 this.mySQLconector = new MySqlConnection(StrConexionArmado.ToString());
-                
-                //se debe de abrir la conexion
-                mySQLconector.Open();
             }
             catch(Exception ex)
             {
@@ -68,7 +68,6 @@ namespace Datos
             }
         }//fin query
   
-               
 
     }//fin class
 }//fin namespace
