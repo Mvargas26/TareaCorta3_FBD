@@ -16,5 +16,17 @@ namespace Interfaz
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LlblCrearUsu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCrearUsuario frmCrearU = new frmCrearUsuario();
+            frmCrearU.Show();
+            this.Hide();
+        }
     }
 }

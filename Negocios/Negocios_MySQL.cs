@@ -17,8 +17,6 @@ namespace Negocios
             {
                 Datos_MySQL objDatos = new Datos_MySQL();
 
-
-
                 return objDatos.QueryMySQL_DT(QueryUserNegociosMySQL);
             }
             catch (Exception Error)
@@ -27,5 +25,17 @@ namespace Negocios
             }
         }//fin metodo QueryMySQLNegocios_DT
 
+        public void CreateUsu(String QueryUser)
+        {
+            try
+            {
+                Datos_MySQL objDatos = new Datos_MySQL();
+                objDatos.InsertUsu(QueryUser);
+            }
+            catch (Exception Error)
+            {
+                throw new Exception(Error.Message);
+            }
+        }
     }//fin class
 }//fin space

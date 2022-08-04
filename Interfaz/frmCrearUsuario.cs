@@ -16,5 +16,10 @@ namespace Interfaz
         {
             InitializeComponent();
         }
+
+        private void btnAgregarU_Click(object sender, EventArgs e)
+        {
+            String Query = "insert into usuario(Nombre, Apellidos, Usuario, Contrasena, Estado) values()";
+        }
     }
 }

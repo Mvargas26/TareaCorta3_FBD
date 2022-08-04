@@ -32,7 +32,7 @@ namespace Datos
 
                 this.mySQLconector = new MySqlConnection(StrConexionArmado.ToString());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -48,7 +48,7 @@ namespace Datos
             try
             {
                 MySqlCommand cmd = mySQLconector.CreateCommand();
- 
+
                 cmd.CommandText = QueryDelUsuario;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable dtdatos = new DataTable();
@@ -57,20 +57,54 @@ namespace Datos
 
                 adapter.Fill(dtdatos);
 
-                
+
 
                 return dtdatos;
             }
             catch (MySqlException ex)
             {
-             throw new Exception(ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
                 mySQLconector.Close();
             }
         }//fin query
-  
+
+        public void InsertUsu(String Query)
+        {
+            try
+            {
+                MySqlConnection conN = mySQLconector; 
+                MySqlCommand Command = new MySqlCommand(Query, conN);
+                MySqlDataReader Reader;
+                conN.Open();
+                Reader = Command.ExecuteReader();
+                conN.Close();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        //public DataTable SelectUsuario(string usu, string contra)
+        //{
+        //    try
+        //    {
+        //        DataTable objUsuario = new DataTable();
+        //        String consulta = "Select * from usuario where Usuario = '" + usu + "' and Contrasena = '" + contra + "';";
+        //        MySqlCommand mysqlcomando = new MySqlCommand(consulta);
+        //        mysqlcomando.Connection = mySQLconector;
+                
+        //        mySQLconector.Close();
+        //        return objUsuario;
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        throw new Exception(ex.Message);
+        //    }
+        //}
 
     }//fin class
 }//fin namespace
