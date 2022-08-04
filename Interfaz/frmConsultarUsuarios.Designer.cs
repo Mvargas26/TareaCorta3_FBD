@@ -34,12 +34,14 @@ namespace Interfaz
             this.txtUsuarioBuscar = new System.Windows.Forms.TextBox();
             this.lblUsuarioBuscar = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.grpConsultar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // grpConsultar
             // 
+            this.grpConsultar.Controls.Add(this.btnLimpiar);
             this.grpConsultar.Controls.Add(this.btnBuscar);
             this.grpConsultar.Controls.Add(this.txtUsuarioBuscar);
             this.grpConsultar.Controls.Add(this.lblUsuarioBuscar);
@@ -53,12 +55,13 @@ namespace Interfaz
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(374, 86);
+            this.btnBuscar.Location = new System.Drawing.Point(265, 87);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(170, 43);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtUsuarioBuscar
             // 
@@ -78,6 +81,7 @@ namespace Interfaz
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -88,6 +92,16 @@ namespace Interfaz
             this.dgvUsuarios.Size = new System.Drawing.Size(800, 290);
             this.dgvUsuarios.TabIndex = 4;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(490, 87);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(170, 43);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmConsultarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -96,7 +110,9 @@ namespace Interfaz
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.grpConsultar);
             this.Name = "frmConsultarUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Usuarios";
+            this.Load += new System.EventHandler(this.frmConsultarUsuarios_Load);
             this.grpConsultar.ResumeLayout(false);
             this.grpConsultar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
@@ -111,5 +127,6 @@ namespace Interfaz
         private System.Windows.Forms.TextBox txtUsuarioBuscar;
         private System.Windows.Forms.Label lblUsuarioBuscar;
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
