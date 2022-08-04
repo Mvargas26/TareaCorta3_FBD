@@ -40,11 +40,13 @@ namespace Interfaz
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtConfContra = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAgregarU
             // 
-            this.btnAgregarU.Location = new System.Drawing.Point(166, 292);
+            this.btnAgregarU.Location = new System.Drawing.Point(164, 345);
             this.btnAgregarU.Name = "btnAgregarU";
             this.btnAgregarU.Size = new System.Drawing.Size(83, 41);
             this.btnAgregarU.TabIndex = 26;
@@ -54,7 +56,7 @@ namespace Interfaz
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(166, 184);
+            this.txtContrasena.Location = new System.Drawing.Point(164, 237);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(212, 20);
@@ -62,21 +64,21 @@ namespace Interfaz
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(166, 129);
+            this.txtUsuario.Location = new System.Drawing.Point(164, 182);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(212, 20);
             this.txtUsuario.TabIndex = 24;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(166, 73);
+            this.txtApellidos.Location = new System.Drawing.Point(164, 126);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(212, 20);
             this.txtApellidos.TabIndex = 23;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(166, 24);
+            this.txtNombre.Location = new System.Drawing.Point(164, 77);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(212, 20);
             this.txtNombre.TabIndex = 22;
@@ -84,7 +86,7 @@ namespace Interfaz
             // lblContrasena
             // 
             this.lblContrasena.AutoSize = true;
-            this.lblContrasena.Location = new System.Drawing.Point(22, 191);
+            this.lblContrasena.Location = new System.Drawing.Point(20, 244);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.Size = new System.Drawing.Size(61, 13);
             this.lblContrasena.TabIndex = 21;
@@ -93,7 +95,7 @@ namespace Interfaz
             // lblNUsu
             // 
             this.lblNUsu.AutoSize = true;
-            this.lblNUsu.Location = new System.Drawing.Point(22, 129);
+            this.lblNUsu.Location = new System.Drawing.Point(20, 182);
             this.lblNUsu.Name = "lblNUsu";
             this.lblNUsu.Size = new System.Drawing.Size(43, 13);
             this.lblNUsu.TabIndex = 20;
@@ -102,7 +104,7 @@ namespace Interfaz
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(22, 80);
+            this.lblApellido.Location = new System.Drawing.Point(20, 133);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(49, 13);
             this.lblApellido.TabIndex = 19;
@@ -111,7 +113,7 @@ namespace Interfaz
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(22, 27);
+            this.lblNombre.Location = new System.Drawing.Point(20, 80);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 18;
@@ -120,7 +122,7 @@ namespace Interfaz
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 239);
+            this.label1.Location = new System.Drawing.Point(20, 292);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 13);
             this.label1.TabIndex = 27;
@@ -128,17 +130,35 @@ namespace Interfaz
             // 
             // txtConfContra
             // 
-            this.txtConfContra.Location = new System.Drawing.Point(166, 232);
+            this.txtConfContra.Location = new System.Drawing.Point(164, 285);
             this.txtConfContra.Name = "txtConfContra";
             this.txtConfContra.PasswordChar = '*';
             this.txtConfContra.Size = new System.Drawing.Size(212, 20);
             this.txtConfContra.TabIndex = 28;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Identificacion";
+            // 
+            // txtIdentificacion
+            // 
+            this.txtIdentificacion.Location = new System.Drawing.Point(164, 29);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(212, 20);
+            this.txtIdentificacion.TabIndex = 30;
+            // 
             // frmCrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 345);
+            this.ClientSize = new System.Drawing.Size(461, 393);
+            this.Controls.Add(this.txtIdentificacion);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtConfContra);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregarU);
@@ -150,7 +170,7 @@ namespace Interfaz
             this.Controls.Add(this.lblNUsu);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCrearUsuario";
             this.Text = "frmCrearUsuario";
             this.ResumeLayout(false);
@@ -171,5 +191,7 @@ namespace Interfaz
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtConfContra;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtIdentificacion;
     }
 }
