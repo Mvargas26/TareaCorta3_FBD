@@ -12,19 +12,19 @@ namespace Negocios
         private string pNombre;
         private string pApellidos;
         private string pUsuario;
-        private string pContraseña; 
-        private string pEstado;
+        private short pEstado;
+        private string pContrasena;
 
         public Usuario() 
         { }
 
-        public Usuario(int pId, string pNombre, string pApellidos, string pUsuario, string pContraseña, string pEstado)
+        public Usuario(int pId, string pNombre, string pApellidos, string pUsuario, string pContrasena, short pEstado)
         {
             this.PId = pId;
             this.PNombre = pNombre;
             this.PApellidos = pApellidos;
             this.PUsuario = pUsuario;
-            this.PContraseña = pContraseña;
+            this.PContrasena = pContrasena;
             this.PEstado = pEstado;
         }
 
@@ -32,7 +32,7 @@ namespace Negocios
         public string PNombre { get => pNombre; set => pNombre = value; }
         public string PApellidos { get => pApellidos; set => pApellidos = value; }
         public string PUsuario { get => pUsuario; set => pUsuario = value; }
-        public string PContraseña { get => pContraseña; set => pContraseña = value; }
-        public string PEstado { get => pEstado; set => pEstado = value; }
+        public string PContrasena { get => pContrasena; set => pContrasena = value; }
+        public short PEstado { get => pEstado; set => pEstado = value; }
     }
 }

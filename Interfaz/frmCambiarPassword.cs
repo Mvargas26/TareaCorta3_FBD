@@ -21,6 +21,7 @@ namespace Interfaz
         //VARIABLES GLOBALES
         Negocios_MySQL objNegocios = new Negocios_MySQL();
         DataTable dt_Usuarios = new DataTable();//tendra la info que viene desde la BD
+
         private void frmCambiarPassword_Load(object sender, EventArgs e)
         {
             try
