@@ -56,23 +56,38 @@ namespace Interfaz
 
 
                 //columnas manualmente
-                dgvUsuarios.ColumnCount = 4;
+                dgvUsuarios.ColumnCount = 6;
 
-                dgvUsuarios.Columns[0].Name = "ID";
+                dgvUsuarios.Columns[0].Name = "Id";
                 dgvUsuarios.Columns[1].Name = "Nombre";
-                dgvUsuarios.Columns[2].Name = "Usuario";
-                dgvUsuarios.Columns[3].Name = "Contraseña";
+                dgvUsuarios.Columns[2].Name = "Apellidos";
+                dgvUsuarios.Columns[3].Name = "Usuario";
+                dgvUsuarios.Columns[4].Name = "Contrasena";
+                dgvUsuarios.Columns[5].Name = "Estado";
 
                 foreach ( DataRow fila in dt_Usuarios.Rows)
                 {
                     if (txtUsuarioBuscar.Text == fila["Usuario"].ToString())
                     {
-                        dgvUsuarios.Rows.Add(fila["ID"], fila["Nombre"], fila["Usuario"], fila["Password"]);
+                        dgvUsuarios.Rows.Add(fila["ID"], fila["Nombre"], fila["Apellidos"], fila["Usuario"], fila["Contrasena"], fila["Estado"]);
                     } 
                 }
 
-
-            }catch(Exception ex)
+                //aqui recorremos el data grid ya cargado para cambiar el estado de 1 a activo
+                foreach (DataGridViewRow dr in dgvUsuarios.Rows)
+                {
+                    if (dr.Cells["Estado"].Value.ToString().Equals("1"))
+                    {
+                        dr.Cells["Estado"].Value = "Activo";
+                    }
+                    else
+                    {
+                        dr.Cells["Estado"].Value = "Inactivo";
+                    }
+                  
+                }
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }//fin btnBsucar
