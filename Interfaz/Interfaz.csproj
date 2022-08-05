@@ -127,9 +127,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCambiarEstado.resx">
-      <DependentUpon>frmCambiarEstado.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCambiarPassword.resx">
       <DependentUpon>frmCambiarPassword.cs</DependentUpon>
     </EmbeddedResource>
