@@ -37,6 +37,7 @@ namespace Interfaz
                 dgvUsuarios.Update();
                 dgvUsuarios.ReadOnly = true;
                 dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+             
 
             }
             catch (Exception ex)
