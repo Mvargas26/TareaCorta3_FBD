@@ -86,6 +86,21 @@ namespace Interfaz
         {
             this.Close();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                frmLoguin pantalla = new frmLoguin();
+                pantalla.MdiParent = this;
+                pantalla.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }//fin class
 }//fin space
 

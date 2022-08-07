@@ -107,6 +107,7 @@ namespace Interfaz
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
             this.Text = "Ventana Principal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mnMenuPrincipal.ResumeLayout(false);
             this.mnMenuPrincipal.PerformLayout();
             this.ResumeLayout(false);

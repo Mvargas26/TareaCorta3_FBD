@@ -59,7 +59,7 @@ namespace Interfaz
                 //este ciclo valida que el ID no este en uso
                 foreach (DataRow fila in dt_Usuarios.Rows)
                 {
-                    if (txtIdentificacion.Text.Equals(fila["Contrasena"].ToString()))
+                    if (txtIdentificacion.Text.Equals(fila["Id"].ToString()))
                     {
                         MessageBox.Show("Ese id ya pertenece a otro Usuario, porfavor indique otro.");
                         return;
