@@ -69,42 +69,6 @@ namespace Datos
             {
                 mySQLconector.Close();
             }
-        }//fin query
-
-        public void InsertUsu(String Query)
-        {
-            try
-            {
-                MySqlConnection conN = mySQLconector; 
-                MySqlCommand Command = new MySqlCommand(Query, conN);
-                MySqlDataReader Reader;
-                conN.Open();
-                Reader = Command.ExecuteReader();
-                conN.Close();
-            }
-            catch (MySqlException ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        //public DataTable SelectUsuario(string usu, string contra)
-        //{
-        //    try
-        //    {
-        //        DataTable objUsuario = new DataTable();
-        //        String consulta = "Select * from usuario where Usuario = '" + usu + "' and Contrasena = '" + contra + "';";
-        //        MySqlCommand mysqlcomando = new MySqlCommand(consulta);
-        //        mysqlcomando.Connection = mySQLconector;
-                
-        //        mySQLconector.Close();
-        //        return objUsuario;
-        //    }
-        //    catch (MySqlException ex)
-        //    {
-        //        throw new Exception(ex.Message);
-        //    }
-        //}
-
+        }//fin query 
     }//fin class
 }//fin namespace

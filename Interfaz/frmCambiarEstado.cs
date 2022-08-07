@@ -23,21 +23,14 @@ namespace Interfaz
         private void frmCambiarEstado_Load(object sender, EventArgs e)
         {
             try
-            {
-                try
-                {
-                    dt_Usuarios = objNegocios.QueryMySQLNegocios_DT("Select * from usuario");
+            { 
+                dt_Usuarios = objNegocios.QueryMySQLNegocios_DT("Select * from usuario");
 
-                    //se recorre el DT con los usuarios para agregar el ususario al combo
-                    foreach (DataRow fila in dt_Usuarios.Rows)
-                    {
-                        //agrega un item por cada fila en la columna Usuario
-                        cmblistaUsuarios.Items.Add(fila["Usuario"].ToString());
-                    }
-                }
-                catch (Exception ex)
+                //se recorre el DT con los usuarios para agregar el ususario al combo
+                foreach (DataRow fila in dt_Usuarios.Rows)
                 {
-                    MessageBox.Show(ex.Message);
+                    //agrega un item por cada fila en la columna Usuario
+                    cmblistaUsuarios.Items.Add(fila["Usuario"].ToString());
                 }
             }
             catch (Exception ex)
@@ -55,8 +48,7 @@ namespace Interfaz
                     if (fila["Usuario"].ToString().Equals(cmblistaUsuarios.Text))
                     {
                         txtUserModif.Text = fila["Id"].ToString();
-                    }
-
+                    } 
                 }
             }
             catch (Exception ex)
@@ -79,7 +71,6 @@ namespace Interfaz
                 {
                     MessageBox.Show("Aun no seleciona el Usuario de la Lista");
                     return;
-
                 }
                 while (cmbNuevoEstado.Text == "")
                 {
@@ -105,9 +96,7 @@ namespace Interfaz
                    "   WHERE Usuario = '" + UsuarioElegido + "';");
 
                 MessageBox.Show("El estado se modifico Correctamente");
-                this.Close();
-
-
+                this.Close(); 
             }
             catch (Exception ex)
             {

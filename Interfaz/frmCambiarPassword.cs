@@ -52,8 +52,7 @@ namespace Interfaz
                 else
                 {
                     this.txtPasswordAnterior.UseSystemPasswordChar = true;
-                }
-
+                } 
             }
             catch (Exception Error)
             {
@@ -92,8 +91,7 @@ namespace Interfaz
                 else
                 {
                     this.txtConfirmarPassword.UseSystemPasswordChar = true;
-                }
-
+                } 
             }
             catch (Exception Error)
             {
@@ -115,36 +113,30 @@ namespace Interfaz
             while (cmblistaUsuarios.Text == "")
             {
                 MessageBox.Show("Aun no seleciona el Usuario de la Lista");
-                return;
-
-            }
-
+                return; 
+            } 
             while (txtPasswordAnterior.Text == "")
             {
                 MessageBox.Show("Contraseña anterior requerida");
-                return;
-
+                return; 
             }
 
             while (txtPasswordNuevo.Text == "")
             {
                 MessageBox.Show("Contraseña  nueva requerida");
-                return;
-
+                return; 
             }
 
             while (txtConfirmarPassword.Text == "")
             {
                 MessageBox.Show("Confirmar Contraseña es requerido");
-                return;
-
+                return; 
             }
 
             while (txtConfirmarPassword.Text != txtPasswordNuevo.Text)
             {
                 MessageBox.Show("La contraseña y la confirmacion son distintas");
-                return;
-
+                return; 
             }
 
             foreach(DataRow fila in dt_Usuarios.Rows)
@@ -161,22 +153,17 @@ namespace Interfaz
                 //FIN VALIDACIONES
                 String passwordNew = txtPasswordNuevo.Text;
                 String UsuarioElegido = cmblistaUsuarios.Text;
-                objNegocios.QueryMySQLNegocios_DT(" UPDATE usuario SET Contrasena = '"+passwordNew+
-                    "'  WHERE Usuario = '"+ UsuarioElegido+"';");
+                objNegocios.QueryMySQLNegocios_DT(" UPDATE usuario SET Contrasena = '" + passwordNew +
+                    "'  WHERE Usuario = '"+ UsuarioElegido + "';");
 
                 MessageBox.Show("La contraseña se modifico Correctamente");
                 this.Close();
-           
-
-
-
-
-        }
+         }
         catch (Exception ex)
-        {
+         {
             MessageBox.Show(ex.Message);
+         }
         }
-}
 
         private void cmblistaUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -187,8 +174,7 @@ namespace Interfaz
                     if (fila["Usuario"].ToString().Equals(cmblistaUsuarios.Text))
                     {
                         txtUserModif.Text = fila["Id"].ToString();
-                    }
-                    
+                    } 
                 }
             }
             catch (Exception ex)
