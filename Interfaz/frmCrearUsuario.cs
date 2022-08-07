@@ -26,7 +26,12 @@ namespace Interfaz
             try
             {
                 //Validaciones
-               while (txtNombre.Text == "")
+                while (txtIdentificacion.Text.ToString() == "")
+                {
+                    MessageBox.Show("La identificacion es requerida");
+                    return;
+                }
+                while (txtNombre.Text == "")
                 {
                     MessageBox.Show("El Nombre es requerido");
                     return;
