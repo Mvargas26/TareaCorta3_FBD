@@ -143,7 +143,7 @@ namespace Interfaz
                 {
                     if (fila["Usuario"].ToString().Equals(cmblistaUsuarios.Text))
                     {
-                        if(fila["Contrasena"].ToString() != txtPasswordAnterior.Text)
+                        if(Encriptado_negocios.DesEncriptando(fila["Contrasena"].ToString()) != txtPasswordAnterior.Text)
                         {
                             MessageBox.Show("La contraseña actual no es igual a la que usted ingreso como anterior");
                             return;
@@ -151,7 +151,7 @@ namespace Interfaz
                     }
                 }
                 //FIN VALIDACIONES
-                String passwordNew = txtPasswordNuevo.Text;
+                String passwordNew = Encriptado_negocios.Encriptando(txtPasswordNuevo.Text);
                 String UsuarioElegido = cmblistaUsuarios.Text;
                 objNegocios.QueryMySQLNegocios_DT(" UPDATE usuario SET Contrasena = '" + passwordNew +
                     "'  WHERE Usuario = '"+ UsuarioElegido + "';");

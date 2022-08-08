@@ -77,7 +77,7 @@ namespace Interfaz
                 obj_Usuario.PNombre = txtNombre.Text;
                 obj_Usuario.PApellidos = txtApellidos.Text;
                 obj_Usuario.PUsuario = txtUsuario.Text;
-                obj_Usuario.PContrasena = txtContrasena.Text;
+                obj_Usuario.PContrasena = Encriptado_negocios.Encriptando(txtContrasena.Text);
                 obj_Usuario.PEstado = Convert.ToInt16(0);
 
                 //se envia el query con los atributos del objeto cliente

@@ -88,7 +88,7 @@ namespace Interfaz
                             return;
                         }
 
-                        if (fila["Contrasena"].ToString().Equals(txtContrasena.Text))
+                        if (Encriptado_negocios.DesEncriptando(fila["Contrasena"].ToString()).Equals(txtContrasena.Text))
                         {
                             UserValido = true;
                             break;
